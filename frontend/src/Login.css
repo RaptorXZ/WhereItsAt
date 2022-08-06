@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&family=Teko:wght@700&family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  width: 375px;
+  height: 667px;
+  background-color: #F39440;
+  font-family: 'Fira Sans';
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+.logoContainer img {
+  margin: auto;
+}
+.logoContainer :nth-child(2) {
+  margin: .5em auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: 'Sansita', sans-serif;
+}
+.logoContainer :nth-child(3) {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.3em;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin: auto;
+  justify-content:flex-start;
+}
+
+.loginForm * {
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.loginForm input {
+  height: 63px;
+  background-color: inherit;
+  color: #090911;
+  border: 2px solid #090911;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.3em;
+  appearance: none;
+}
+
+.marginTopBottom {
+  margin: 2em 0;
+}
+
+.marginBottom {
+  margin-bottom: 2em;
+}
+
+.loginForm button {
+  background-color: #231F42;
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.errorMsg {
+  font-size: 14px;
+  line-height: normal;
+  margin: 8px 0 0;
+}
+
+.logoutBtn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #fff;
+}

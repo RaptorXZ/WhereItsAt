@@ -1,0 +1,74 @@
+{
+    "accounts": [
+        {
+            "id": 1,
+            "username": "Ada",
+            "password": "$2b$10$thqGmpPH4miK3Fherj7Xc.E9.dFDFkRHKoLifgGl9gpb5TZbFcFIW",
+            "tempId": null,
+            "token": null
+        },
+        {
+            "id": 2,
+            "username": "My",
+            "password": "$2b$10$Wre/lZfku.oWXFKAtBxo7.dRxKFkqbcFynTlOTfx51kV4RTc8ZYnK",
+            "tempId": null,
+            "token": null
+        }
+    ],
+    "tickets": [
+        {
+            "id": 1,
+            "ticketnr": "F93387KB",
+            "verified": false,
+            "eventId": 3
+        },
+        {
+            "id": 2,
+            "ticketnr": "F57289UG",
+            "verified": false,
+            "eventId": 4
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "what": "Lasse-Stefanz",
+            "where": "Kjell Härnqvistsalen",
+            "from": "19.00",
+            "to": "21.00",
+            "price": "350",
+            "day": "21",
+            "month": "March"
+        },
+        {
+            "id": 2,
+            "what": "Pelle trubadur",
+            "where": "Pubelipuben",
+            "from": "22.00",
+            "to": "00.00",
+            "price": "110",
+            "day": "29",
+            "month": "March"
+        },
+        {
+            "id": 3,
+            "what": "Kajsas kör",
+            "where": "Götaplatsen",
+            "from": "15.00",
+            "to": "16.00",
+            "price": "99",
+            "day": "10",
+            "month": "April"
+        },
+        {
+            "id": 4,
+            "what": "Klubb Untz",
+            "where": "Din favoritkällare",
+            "from": "22.00",
+            "to": "you tire",
+            "price": "150",
+            "day": "17",
+            "month": "April"
+        }
+    ]
+}

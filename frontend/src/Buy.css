@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&family=Teko:wght@700&family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.Buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 375px;
+    height: 667px;
+    background-color: #231F42;
+    font-family: 'Fira Sans';
+    text-align: center;
+    flex-grow: 1;
+}
+
+.buyHeader {
+    font-family: 'Fira Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 4em auto 3em;
+    width: 202px;
+}
+
+.buyWhat {
+    font-family: 'Sansita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 41px;
+    color: #F56B9A;
+    margin: 0;
+}
+
+.buyWhen {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    color: #37AEAB;
+    margin: .5em;
+}
+
+.buyWhere {
+    font-family: 'Fira Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: .5em;
+}
+
+.flexStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flexEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.buyPrice {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px #F56B9A;
+}
+
+.buyButton {
+    background: #37AEAB;
+    height: 60px;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin: 4.5em 2em 1.5em;
+}

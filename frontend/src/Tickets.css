@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&family=Teko:wght@700&family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.Tickets {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 375px;
+    height: 667px;
+    background-color: #231F42;
+    font-family: 'Fira Sans';
+}
+
+.ticketsHeader {
+    font-family: 'Sansita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #F56B9A;
+    margin: 1em 0 0;
+}
+
+.ticketsContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.ticketsItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #fff;
+    margin: 0;
+}
+
+.ticketsDetails {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    padding: 13px 16px;
+}
+.ticketsDetails p {
+    margin: .891em 0;
+}
+
+.ticketInvalidUrl {
+    width: 200px;
+    font-family: 'Sansita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+}

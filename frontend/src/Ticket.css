@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&family=Teko:wght@700&family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.Ticket {
+    background: linear-gradient(180deg, #F56B9A 0%, rgb(22, 3, 34) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 375px;
+    height: 667px;
+}
+
+.ticketContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 1em;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.34);
+    border-radius: 3px;
+}
+
+.ticketColumn {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0 0 12px;
+}
+.ticketRow {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px dashed rgba(0, 0, 0, 0.4);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+}
+.ticketRow .ticketColumn {
+    flex-grow: 1;
+}
+.borderSides {
+    border-right: 1px dashed rgba(0, 0, 0, 0.4);
+    border-left: 1px dashed rgba(0, 0, 0, 0.4);
+}
+
+.smallHeader {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.ticketDetail {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: .5em 0;
+}
+
+.ticketWhat {
+    font-family: 'Sansita';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #F56B9A;
+}
+
+.ticketWhere {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 1em 0 3em;
+}
+
+.ticketNumber {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.3em;
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 2em 0;
+}
+
+.ticketGrey1 {
+    background: rgba(0, 0, 0, 0.03);
+    border-top: 1px dashed rgba(0, 0, 0, 0.4);
+}
+.ticketGrey2 {
+    background: rgba(0, 0, 0, 0.06);
+}
+.ticketGrey3 {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.ticketBarcode {
+    margin: 3em auto 0;
+}
