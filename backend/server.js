@@ -4,6 +4,8 @@ import { join, dirname } from 'path';
 import { Low, JSONFile } from 'lowdb';
 import { fileURLToPath } from 'url';
 import { nanoid, customAlphabet } from 'nanoid';
+import jwt from 'jsonwebtoken';
+import auth from './auth.js';
 const customnano = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 7);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const file = join(__dirname, 'database.json');
@@ -27,6 +29,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+/*
 app.post('/api/staff/login', async (request, response) => {
     const credentials = request.body;
     const user = db.data.accounts.find(user => user.username === credentials.username);
@@ -43,7 +46,68 @@ app.post('/api/staff/login', async (request, response) => {
                 account.tempId = cookieId;
             }
         });
+
+        // Create token
+        const token = jwt.sign(
+            { user_id: user.id },
+            'F501DEHKLM',
+            {
+              expiresIn: "2h",
+            }
+        );
+
+        // save user token
+        user.token = token;
+        result.token = token;
         
+        result.success = true;
+    }
+
+    response.json(result);
+});
+
+app.get('/api/staff/loggedin', auth, (request, response) => {
+    let result = { loggedIn: false };
+    const loggedInId = request.cookies.loggedIn;
+    const isLoggedIn = db.data.accounts.find(user => user.tempId === loggedInId);
+
+    if(isLoggedIn && loggedInId != null) {
+        result.loggedIn = true;
+    }
+
+    response.json(result);
+});
+*/
+
+app.post('/api/staff/login', async (request, response) => {
+    const credentials = request.body;
+    const user = db.data.accounts.find(user => user.username === credentials.username);
+    let result = { success: false, token: '' };
+
+    if(user && (await bcrypt.compare(credentials.password, user.password))) {
+        let accounts = db.data.accounts;
+        
+
+        // Create token
+        const token = jwt.sign(
+            { user_id: user.id },
+            'F501DEHKLM',
+            {
+              expiresIn: "2h",
+            }
+        );
+
+        // save user token
+        response.cookie('jwt', token);
+        user.token = token;
+
+        accounts.map((account) => {
+            if(account.username === credentials.username) {
+                account.token = token;
+            }
+        });
+
+        result.token = token;
         result.success = true;
     }
 
@@ -52,11 +116,17 @@ app.post('/api/staff/login', async (request, response) => {
 
 app.get('/api/staff/loggedin', (request, response) => {
     let result = { loggedIn: false };
-    const loggedInId = request.cookies.loggedIn;
-    const isLoggedIn = db.data.accounts.find(user => user.tempId === loggedInId);
+    const token = request.cookies.jwt;
 
-    if(isLoggedIn && loggedInId != null) {
-        result.loggedIn = true;
+    if(token) {
+        jwt.verify(token, 'F501DEHKLM', (err, decodedToken) => {
+            if(err) {
+                console.log(err.message);
+            } else {
+                //console.log('Decoded token:', decodedToken);
+                result.loggedIn = true;
+            }
+        });
     }
 
     response.json(result);

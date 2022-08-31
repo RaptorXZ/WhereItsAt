@@ -62,7 +62,7 @@ function Verify() {
     }
 
     function logOut() {
-        document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+        document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
         navigate('/staff/login');
     }
 

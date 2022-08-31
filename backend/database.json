@@ -5,14 +5,14 @@
             "username": "Ada",
             "password": "$2b$10$thqGmpPH4miK3Fherj7Xc.E9.dFDFkRHKoLifgGl9gpb5TZbFcFIW",
             "tempId": null,
-            "token": null
+            "token": ""
         },
         {
             "id": 2,
             "username": "My",
             "password": "$2b$10$Wre/lZfku.oWXFKAtBxo7.dRxKFkqbcFynTlOTfx51kV4RTc8ZYnK",
             "tempId": null,
-            "token": null
+            "token": ""
         }
     ],
     "tickets": [
